@@ -379,6 +379,7 @@ main .navbar-content {
 
 main .esg-framework {
     margin: auto;
+    overflow-x: scroll;
 }
 
 main .esg-performance {
@@ -400,7 +401,6 @@ main .esg-performance {
     min-width: 700px;
     font-size: 1.5rem;
     font-family: font-semibold;
-    background-color: #006F41;
     background-size: cover;
     background-repeat: repeat;
     display: inline-flex;
@@ -428,6 +428,7 @@ main .esg-performance {
 .vision .ag-box-wrapper .ag-box-item {
     background-color: #006F41;
     width: 100%;
+    min-width: 260px;
     padding: 0 82px;
     text-align: center;
     padding: 20px 0;
@@ -547,50 +548,38 @@ main .esg-performance {
 
 .esg-awards {
     background-color: #F3F3F3;
-    /* width: 100%; */
     margin: auto;
-    /* padding: 80px 160px; */
     margin-top: 104px;
+    padding: 5rem 5rem;
 }
 
-.esg-awards .heading {
-    color: var(--mandiri-colour-03);
-    text-align: center;
-    font-size: 32px;
-    font-family: font-semibold;
-    margin-bottom: 32px;
-}
-
-.esg-awards .card-wrapper {
-    display: flex;
-    gap: 32px;
-}
-
-.esg-awards .card-wrapper .card {
+.esg-awards .card {
     width: 351px;
     height: 224px;
     background-color: #F9F9F9;
-    padding: 35px 0;
+    padding: 35px 0 0 0;
     display: flex;
     flex-direction: column;
+    align-items: space-between;
     border-radius: 8px;
 
 }
 
-.esg-awards .card-wrapper .image {
-    background-color: #F9F9F9;
+.esg-awards .image {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    width: 100%;
 }
 
-.esg-awards .card-wrapper .card .label {
+.esg-awards .card .label {
     text-align: center;
-    width: 351px;
-    padding: 16px 16px 20px 16px;
+    width: 100%;
+    height: 73px;
     background-color: #FFF;
     border-radius: 8px;
     display: flex;
+    padding: 1rem 0;
     flex-direction: column;
     gap: 12px;
     font-family: font-semibold;
@@ -606,12 +595,6 @@ main .esg-performance {
     font-size: 20px;
 }
 
-.esg-awards .slide {
-    display: flex;
-    justify-content: center;
-    margin-top: 120px;
-    gap: 16px;
-}
 
 .esg-awards .slide img {
     width: 32px;
@@ -634,8 +617,7 @@ main .esg-performance {
     position: relative;
     background-color: #05203F;
     margin-top: 104px;
-    padding-top: 40px;
-    padding-bottom: 70px;
+    padding: 2.5rem 2.5rem;
     margin: auto;
 }
 
@@ -645,21 +627,15 @@ main .esg-performance {
     left: 0;
 }
 
-.news .heading {
-    color: #fff;
-    text-align: center;
-}
-
 .news .card-wrapper {
-    display: flex;
-    gap: 32px;
-    margin-top: 40px;
+    overflow-x: scroll;
+    justify-content: center;
 }
-
 
 .news .card-wrapper .card {
     display: flex;
     width: 351px;
+    min-width: 351px;
     flex-direction: column;
     background-color: #fff;
     border-radius: 8px;
@@ -3312,8 +3288,8 @@ td {
 /* screen tablet */
 
 @media screen and (max-width: 1280px) {
-    #overview {
-        padding: 0;
+    .ag-container {
+        padding: 0 0;
     }
 
     .content .vision .ag-box-wrapper {
@@ -3357,11 +3333,19 @@ td {
     .esg-awards .card-wrapper .card .label {
         width: 290px;
     }
+
+    .news .card-wrapper {
+        justify-self: flex-start;
+    }
 }
 
 @media screen and (max-width: 1024px) {
     .down .menu-navbar {
         font-size: 11px;
+    }
+
+    .news .card-wrapper {
+        justify-self: flex-start;
     }
 }
 
@@ -3631,12 +3615,14 @@ td {
     }
 
     .news .card-wrapper {
-        overflow-y: scroll;
+        overflow-x: scroll;
+        justify-content: flex-start;
     }
 
     .news .card-wrapper .card {
         width: 60%;
     }
+    
 
     /* End Overview */
 
