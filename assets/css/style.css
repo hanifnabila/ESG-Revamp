@@ -32,22 +32,172 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    ag-box-sizing: border-ag-box;
     list-style: none;
     text-decoration: none;
 }
 
-.container {
+.ag-container {
     max-width: 1440px;
     padding: 0 160px;
 }
 
-main {
-    margin: auto;
+.ag-heading-xl {
+    color: var(--mandiri-colour-03, #013066);
+    font-family: Myriad Pro;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
 }
 
-.banner {
-    padding: 0;
+.ag-heading-lg {
+    font-family: Myriad Pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+}
+
+.ag-heading-md {
+    font-family: Myriad Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    text-transform: capitalize;
+}
+
+.ag-heading-sm {
+    color: var(--mandiri-colours-04, #013066);
+    font-family: Myriad Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.ag-heading-base {
+    color: var(--color-02, #013066);
+    text-align: center;
+    font-family: Myriad Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.ag-heading-xs {
+    color: var(--mandiri-colours-04, #013066);
+    font-family: Myriad Pro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.ag-main-color {
+    color: #013066;
+}
+
+.ag-font-normal {
+    font-weight: 400;
+}
+
+.ag-font-semibold {
+    font-weight: 600;
+}
+
+.ag-font-bold {
+    font-weight: 700;
+}
+
+.ag-text-center {
+    text-align: center;
+}
+
+.ag-description-sm {
+    color: var(--mandiri-colours-04, #013066);
+    text-align: center;
+    font-family: Myriad Pro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.ag-description-md {
+    color: var(--mandiri-light-008, #4F6378);
+    font-family: Myriad Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: -0.08px;
+    text-transform: capitalize;
+}
+
+.ag-description-lg {
+    color: var(--mandiri-dark-010, #020B15);
+    text-align: center;
+    font-family: Myriad Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+}
+
+.ag-description-xl {
+    color: #000;
+    font-family: Myriad Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    text-transform: capitalize;
+}
+
+.ag-flex {
+    display: flex;
+}
+
+.ag-flex-col {
+    flex-direction: column;
+}
+
+.ag-align-center {
+    align-items: center;
+}
+
+.ag-justify-center {
+    justify-content: center;
+}
+
+.ag-content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ag-w-full {
+    width: 100%;
+}
+
+.ag-max-w-full {
+    max-width: 100%;
+}
+
+
+main {
     margin: auto;
 }
 
@@ -80,59 +230,148 @@ main .navbar-content {
     margin-top: 32px;
 }
 
-.navbar-content .menu .radio-button {
-    /* display: none; */
+.ag-radio-button {
+    display: none;
+}
+
+.main-content {
+    display: none;
 }
 
 #filter {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
-.filter-label {
-    display: inline-block;
-    border: 4px solid green;
-    padding: 10px 20px;
-    font-size: 1.4em;
-    text-align: center;
-    cursor: pointer;
-  }
+.ag-main-tab {
+    color: var(--mandiri-light-006, #7795B4);
+    font-family: Myriad Pro;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 1077px;
+    /* margin: auto; */
+    overflow-x: auto;
+    border-bottom: 3px solid var(--mandiri-light-002, #D2DCE6);
+    padding: 0 ;
+}
 
-.content {
+.ag-main-tab::-webkit-scrollbar {
     display: none;
 }
 
-#overview-radio:checked ~ #filter .overview,
-#environment-radio:checked ~ #filter .environment,
-#social-radio:checked ~ #filter .social,
-#governance-radio:checked ~ #filter .governance,
-#report-radio:checked ~ #filter .report,
-#contact-radio:checked ~ #filter .contact {
-    background-color: green;
+.ag-main-filter-label {
+    display: flex;
+    gap: 60px;
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px;
+    justify-content: center;
+    margin: auto;
+    align-items: flex-start;
+    color: var(--mandiri-light-006);
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
-#overview-radio:checked~main .overview {
+.ag-filter-wrapper {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin: auto;
+    overflow-x: scroll;
+}
+
+.ag-filter-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.ag-filter-label {
+    display: flex;
+    align-items: center;
+    width: 16.25rem;
+    height: 3.688rem;
+    background: #F0F0F0;
+    color: #7795B4;
+    margin-top: 2rem;
+    padding: 20px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.ag-content-filter-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* justify-items: center; */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.ag-content-filter-label {
+    width: 16.25rem;
+    height: 3.688rem;
+    background: #F5F5F5;
+}
+
+
+
+#overview-radio:checked~main #overview {
     display: block;
 }
 
-#environment-radio:checked~main .environment {
+#overview-radio:checked~header .overview {
+    border-bottom: 3px solid var(--mandiri-colours-05, #0024AE);
+    color: var(--mandiri-colours-05, #0024AE);
+}
+
+#environment-radio:checked~main #environment {
     display: block;
 }
 
-#social-radio:checked~main .social {
+#environment-radio:checked~header .environment {
+    border-bottom: 3px solid var(--mandiri-colours-05, #0024AE);
+    color: var(--mandiri-colours-05, #0024AE);
+}
+
+#social-radio:checked~main #social {
     display: block;
 }
 
-#governance-radio:checked~main .governance {
+#social-radio:checked~header .social {
+    border-bottom: 3px solid var(--mandiri-colours-05, #0024AE);
+    color: var(--mandiri-colours-05, #0024AE);
+}
+
+#governance-radio:checked~main #governance {
     display: block;
 }
 
-#report-radio:checked~main .report {
+#governance-radio:checked~header .governance {
+    border-bottom: 3px solid var(--mandiri-colours-05, #0024AE);
+    color: var(--mandiri-colours-05, #0024AE);
+}
+
+#report-radio:checked~main #report {
     display: block;
 }
 
-#contact-radio:checked~main .contact {
+#report-radio:checked~header .report {
+    border-bottom: 3px solid var(--mandiri-colours-05, #0024AE);
+    color: var(--mandiri-colours-05, #0024AE);
+}
+
+#contact-radio:checked~main #contact {
     display: block;
+}
+
+#contact-radio:checked~header .contact {
+    border-bottom: 3px solid var(--mandiri-colours-05, #0024AE);
+    color: var(--mandiri-colours-05, #0024AE);
 }
 
 
@@ -150,36 +389,31 @@ main .esg-performance {
     display: none;
 }
 
-.esg-framework .heading {
-    color: var(--mandiri-colour-03);
-    text-align: center;
-    font-size: 32px;
-    font-family: font-semibold;
-    margin-top: 84px;
-    margin-bottom: 55px;
-}
-
 .esg-framework .content .vision {
     display: flex;
-    gap: 69px;
     align-items: center;
     justify-content: space-between;
 }
 
-.content .vision .box-wrapper {
-    /* background: url('/assets/img/img-bg-visi.jpeg'); */
-    width: 1013px;
-    font-size: 25px;
+.content .ag-box-wrapper {
+    width: 95%;
+    min-width: 700px;
+    font-size: 1.5rem;
     font-family: font-semibold;
     background-color: #006F41;
     background-size: cover;
     background-repeat: repeat;
     display: inline-flex;
-    padding: 16px 81px 16px 82px;
+    padding: 1rem 2rem;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     color: white;
+}
+
+.content p {
+    width: 132px;
+    min-width: 132px;
 }
 
 .esg-framework .content .pillars {
@@ -189,22 +423,19 @@ main .esg-performance {
     margin-top: 12px;
 }
 
-.pillars .box-wrapper {
-    gap: 24px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.pillars .box-wrapper .box-item {
+
+.vision .ag-box-wrapper .ag-box-item {
     background-color: #006F41;
-    width: 321px;
+    width: 100%;
+    padding: 0 82px;
     text-align: center;
     padding: 20px 0;
     border-radius: 8px;
     font-family: font-semibold;
     color: white;
     font-size: 20px;
+    white-space: nowrap;
 }
 
 .content .commitment {
@@ -214,14 +445,7 @@ main .esg-performance {
     margin-top: 13px;
 }
 
-.commitment .box-wrapper {
-    gap: 24px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.commitment .box-wrapper .box-item {
+.commitment .ag-box-wrapper .ag-box-item {
     background-color: var(--grey-neutral-300);
     width: 321px;
     text-align: center;
@@ -240,14 +464,14 @@ main .esg-performance {
     justify-content: space-between;
 }
 
-.initiatives .box-wrapper {
+.initiatives .ag-box-wrapper {
     gap: 24px;
     display: inline-flex;
     justify-content: center;
     border: 2 solid var(--grey-neutral-300);
 }
 
-.initiatives .box-wrapper .content {
+.initiatives .ag-box-wrapper .content {
     width: 321px;
     padding: 32px;
     border-radius: 8px;
@@ -256,19 +480,24 @@ main .esg-performance {
     gap: 24px;
 }
 
-.box-wrapper .content .item-content {
+.ag-box-wrapper .content .item-content {
     list-style-type: disc;
 }
 
 .esg-framework .content .enablers {
     display: flex;
-    gap: 69px;
     /* align-items: center; */
     justify-content: space-between;
 }
 
-.content .enablers .box-wrapper {
-    width: 1013px;
+/* .enablers .wrapper {
+    width: 95%;
+    min-width: 700px;
+} */
+
+/* .content .enablers .ag-box-wrapper {
+    width: 95%;
+    min-width: 700px;
     font-size: 25px;
     font-family: font-semibold;
     background-color: #FEB602;
@@ -280,7 +509,7 @@ main .esg-performance {
     align-items: center;
     border-radius: 8px;
     color: white;
-}
+} */
 
 .esg-performance .heading {
     color: var(--mandiri-colour-03);
@@ -318,9 +547,9 @@ main .esg-performance {
 
 .esg-awards {
     background-color: #F3F3F3;
-    width: 100%;
+    /* width: 100%; */
     margin: auto;
-    padding: 80px 160px;
+    /* padding: 80px 160px; */
     margin-top: 104px;
 }
 
@@ -453,16 +682,16 @@ main .esg-performance {
 .card .information .label {
     font-family: font-semibold;
     font-size: 24px;
-    display: -webkit-box;
+    display: -webkit-ag-box;
     -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    -webkit-ag-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 12px;
     color: var(--main-color);
 }
 
-.card .information .description {
+.card .information .ag-description {
     font-family: font-regular;
     font-size: 16px;
     margin-bottom: 26px;
@@ -498,28 +727,1132 @@ main .esg-performance {
 
 /* Start Environment */
 
-.aspect {
+.environment .menu-kategori {
+    display: block;
+    justify-content: center;
+    gap: 0.625rem;
+}
+
+#environment {
+    margin: auto;
+}
+
+#environment .environment-content {
+    display: none;
+}
+
+#environment #tcfd-radio:checked~div #tcfd {
+    display: block;
+}
+
+#tcfd-radio:checked~header #tcfd-label {
+    background: #DFEFFF;
+    box-shadow: 4px 6px 20px 0px rgba(1, 48, 102, 0.32);
+    color: var(--color-02, #013066);
+}
+
+#product-radio:checked~div #product {
+    display: block;
+}
+
+#product-radio:checked~header #product-label {
+    background: #DFEFFF;
+    box-shadow: 4px 6px 20px 0px rgba(1, 48, 102, 0.32);
+    color: var(--color-02, #013066);
+}
+
+#operation-radio:checked~div #operation {
+    display: block;
+}
+
+#operation-radio:checked~header #operation-label {
+    background: #DFEFFF;
+    box-shadow: 4px 6px 20px 0px rgba(1, 48, 102, 0.32);
+    color: var(--color-02, #013066);
+}
+
+#approach-radio:checked~div #approach {
+    display: block;
+}
+
+#approach-radio:checked~header #approach-label {
+    background: #DFEFFF;
+    box-shadow: 4px 6px 20px 0px rgba(1, 48, 102, 0.32);
+    color: var(--color-02, #013066);
+}
+
+/* start product */
+
+.environment .product .heading {
+    color: var(--mandiri-colours-04, #013066);
+    font-family: font-semibold;
+    font-size: 2rem;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 5.25rem;
+}
+
+.environment .product .label {
+    color: var(--text-color-01, #020B15);
+    text-align: center;
+    font-family: font-regular;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    text-transform: capitalize;
+    margin-top: 1.313rem;
+}
+
+.environment .ag-filter-label img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.environment .financing,
+.environment .other-product {
+    background-color: #F5F5F5;
+    color: #767676;
+}
+
+#product .product-content {
+    display: none;
+}
+
+#product #portfolio-radio:checked~div .portfolio {
+    display: block;
+}
+
+#product #financing-radio:checked~div .financing {
+    display: block;
+}
+
+#product #other-product-radio:checked~div .other-product {
+    display: block;
+}
+
+/* start product - financing */
+
+#financing .tab-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 1rem;
+}
+
+#financing .tab-wrapper .tab {
+    display: flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: var(--grey-neutral-500, #E6E6E6);
+    color: var(--mandiri-light-007, #637C96);
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+#financing .card-wrapper .card {
+    display: flex;
+    gap: 3.75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#financing .card-wrapper img {
+    width: 22.5rem;
+    height: 22.5rem;
+    flex-shrink: 0;
+    text-align: left;
+    margin-top: 3.25rem;
+    border-radius: 0.5rem;
+}
+
+#financing .card-wrapper .content-financing {
+    text-align: left;
+}
+
+.card-wrapper .content-financing .heading-financing {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.card-wrapper .content-financing .ag-description {
+    color: var(--mandiri-light-009, #3C4B5A);
+    text-align: justify;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 1rem;
+}
+
+
+/* end product - financing */
+
+
+/* start product - portfolio */
+
+.environment .date {
+    color: var(--light-grey-900, #000);
+    font-family: font-regular;
+    font-size: 1rem;
+    line-height: 22px;
+    padding: 0.75rem;
+    gap: 0.25rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-top: 5rem;
+}
+
+.product article .items-wrapper {
+    display: flex;
+    gap: 1.75rem;
+}
+
+.product article .items-wrapper h4 {
+    color: var(--color-02, #013066);
+    text-align: center;
+    font-family: font-bold;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.product article .items-wrapper p {
+    color: var(--color-02, #013066);
+    text-align: center;
+    font-family: font-semi;
+    font-size: 1.125rem;
+    text-transform: capitalize;
+}
+
+.product article .price-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+.product article .items {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 22.688rem;
+    margin-top: 7rem;
+    background: #F3F3F3;
+    padding: 2.6rem;
+    gap: 0.8rem;
+}
+
+.product article .price {
+    position: relative;
+    width: 16.375rem;
+    height: 8.438rem;
+    border-radius: 0.5rem;
+    background: #F3F3F3;
+    margin-top: 3.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product article .price p {
+    color: var(--mandiri-colour-03, #013066);
+    font-family: font-semibold;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.product article .price h4 {
+    color: #000;
+    font-family: font-bold;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.product article .price img {
+    position: absolute;
+    width: 6.2rem;
+    height: 6.2rem;
+    bottom: 5.2rem;
+    right: 13.5rem;
+    top: 1.2rem;
+}
+
+.product article img {
+    width: 100%;
+}
+
+/* end product - #portfolio */
+
+/* start product - #other products */
+
+#other-product .tab-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 1rem;
+}
+
+#other-product .tab-wrapper .tab {
+    display: flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: var(--grey-neutral-500, #E6E6E6);
+    color: var(--mandiri-light-007, #637C96);
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+#other-product .card-wrapper .card {
+    display: flex;
+    gap: 3.75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#other-product .card-wrapper img {
+    width: 22.5rem;
+    height: 22.5rem;
+    flex-shrink: 0;
+    text-align: left;
+    margin-top: 3.25rem;
+    border-radius: 0.5rem;
+}
+
+#other-product .card-wrapper .content-other-product {
+    text-align: left;
+}
+
+.card-wrapper .content-other-product .heading-other-product {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.card-wrapper .content-other-product .ag-description {
+    color: var(--mandiri-light-009, #3C4B5A);
+    text-align: justify;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 1rem;
+}
+
+.card-wrapper .content-other-product .category-wrapper {
+    display: flex;
+    gap: 0.8rem;
+}
+
+#sustainability {
+    color: #FFF;
+    text-align: center;
+    font-size: 0.874rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    padding: 11px 68.852px 10px 70px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 5.799px;
+    background: var(--color-02, #013066);
+}
+
+#transition {
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    padding: 11px 11px 10px 11px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 5.799px;
+    background: var(--color-02, #013066);
+}
+
+/* end product - #other products */
+
+/* end product */
+
+/* start approach */
+
+#approach .card1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5.25rem;
+    background-color: #F8F8F8;
+}
+
+#approach .card1 .left-content-approach {
+    padding: 0 3.25rem;
+}
+
+#approach .card1 .left-content-approach h4 {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+}
+
+#approach .card1 .left-content-approach p,
+ul {
+    color: #3C4B5A;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+}
+
+#approach .card1 img {
+    width: 30.875rem;
+    height: 35.875rem;
+}
+
+#approach #approach-filter {
+    gap: 1.5rem;
+}
+
+#approach .environment-approach-content {
+    display: none;
+    gap: 2.75rem;
+    margin-top: 5rem;
+}
+
+#approach #cpo-radio:checked~div #cpo {
+    display: flex;
+}
+
+#approach #construction-radio:checked~div #construction {
+    display: flex;
+}
+
+#approach #energy-radio:checked~div #energy {
+    display: flex;
+}
+
+#approach #fmcg-radio:checked~div #fmcg {
+    display: flex;
+}
+
+#approach #metal-radio:checked~div #metal {
+    display: flex;
+}
+
+/* start approach - cpo */
+
+#cpo #img-cpo {
+    width: 27.75rem;
+    height: 18.125rem;
+}
+
+#cpo #cpo-quote {
+    color: #000;
+    font-size: 0.75rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+#cpo .cpo-content .ag-description {
+    color: var(--mandiri-light-009, #3C4B5A);
+    text-align: justify;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+#cpo .cpo-content .heading {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+#cpo .cpo-content .pdf {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    gap: 0.75rem;
+}
+
+#cpo .cpo-content .pdf span {
+    color: var(--light-grey-900, #000);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: capitalize;
+}
+
+#cpo .cpo-content button {
+    margin-top: 12px;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--mandiri-colours-05, #0024AE);
+    background: #FFF;
+}
+
+/* end approach - cpo */
+
+/* start approach - construction */
+
+#construction #img-cpo {
+    width: 27.75rem;
+    height: 18.125rem;
+}
+
+#construction #img-construction {
+    width: 27.75rem;
+    height: 18.125rem;
+}
+
+#construction .ag-description {
+    color: var(--mandiri-light-009, #3C4B5A);
+    text-align: justify;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+#construction .heading {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+#construction .pdf {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    gap: 0.75rem;
+}
+
+#construction .pdf span {
+    color: var(--light-grey-900, #000);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: capitalize;
+}
+
+#construction button {
+    margin-top: 12px;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--mandiri-colours-05, #0024AE);
+    background: #FFF;
+}
+
+/* end approach - construction */
+
+/* start approach - energy */
+
+#energy #img-cpo {
+    width: 27.75rem;
+    height: 18.125rem;
+}
+
+#energy #img-energy {
+    width: 27.75rem;
+    height: 18.125rem;
+}
+
+#energy .ag-description {
+    color: var(--mandiri-light-009, #3C4B5A);
+    text-align: justify;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+#energy .heading {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+#energy .pdf {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    gap: 0.75rem;
+}
+
+#energy .pdf span {
+    color: var(--light-grey-900, #000);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: capitalize;
+}
+
+#energy button {
+    margin-top: 12px;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--mandiri-colours-05, #0024AE);
+    background: #FFF;
+}
+
+/* end approach - energy */
+
+/* start approach - fmcg */
+
+#fmcg #img-cpo {
+    width: 27.75rem;
+    height: 18.125rem;
+}
+
+#fmcg #img-fmcg {
+    width: 27.75rem;
+    height: 18.125rem;
+}
+
+#fmcg .ag-description {
+    color: var(--mandiri-light-009, #3C4B5A);
+    text-align: justify;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+#fmcg .heading {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+#fmcg .pdf {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    gap: 0.75rem;
+}
+
+#fmcg .pdf span {
+    color: var(--light-grey-900, #000);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: capitalize;
+}
+
+#fmcg button {
+    margin-top: 12px;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--mandiri-colours-05, #0024AE);
+    background: #FFF;
+}
+
+/* end approach - fmcg */
+
+/* start approach - metal */
+
+#metal #img-cpo {
+    width: 27.75rem;
+    height: 18.125rem;
+}
+
+#metal #img-metal {
+    width: 27.75rem;
+    height: 18.125rem;
+}
+
+#metal .ag-description {
+    color: var(--mandiri-light-009, #3C4B5A);
+    text-align: justify;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+#metal .heading {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+#metal .download {
+    display: flex;
+    gap: 1.25rem;
+}
+
+#metal .pdf {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    gap: 0.75rem;
+}
+
+#metal .pdf span {
+    color: var(--light-grey-900, #000);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: capitalize;
+}
+
+#metal button {
+    margin-top: 12px;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--mandiri-colours-05, #0024AE);
+    background: #FFF;
+}
+
+/* start approach - metal */
+
+/* end approach */
+
+/* start operation */
+#operation .operation-filter {
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    /* Empat kolom pertama */
+    grid-auto-flow: row;
+    /* Konten sisanya akan turun ke bawah */
+    grid-gap: 10px;
+    /* Jarak antara item */
+    justify-content: start;
+    /* Mengatur konten ke kiri */
+    align-items: start;
+}
+
+#operation .content-wrapper-operation {
+    display: flex;
+    margin-top: 5.25rem;
+}
+
+#operation .content-wrapper-operation .content-operation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#operation .content-operation .heading-content-operation {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+}
+
+#operation .content-operation .ag-description {
+    color: #3C4B5A;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.05px;
+}
+
+#operation .content-operation .quote-operation {
+    color: #000;
+    font-size: 0.75rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 20px;
+    /* 166.667% */
+    text-transform: capitalize;
+    border-left: 2px solid linear-gradient(247deg, #17AF26 6.1%, #057D52 87.45%);
+}
+
+#operation .content-operation .pernyataan {
+    color: #000;
+    font-family: Myriad Pro;
+    font-size: 0.75rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 20px;
+    /* 166.667% */
+    text-transform: capitalize;
+}
+
+#operation .heading-operation {
+    color: var(--mandiri-colours-04, #013066);
+    font-family: Myriad Pro;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 2.688rem;
+}
+
+#operation .operation-content {
+    display: none;
+}
+
+#operation #certification-radio:checked~div #certification {
+    display: flex;
+}
+
+#operation #low-emission-radio:checked~div #low-emission {
+    display: flex;
+}
+
+#operation #led-radio:checked~div #led {
+    display: flex;
+}
+
+#operation #water-efficiency-radio:checked~div #water-efficiency {
+    display: flex;
+}
+
+#operation #carbon-tracking-radio:checked~div #carbon-tracking {
+    display: block;
+}
+
+/* start operation - certification  */
+
+#certification {
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+#certification img {
+    width: 50%;
+}
+
+#certification .content-certification {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#certification .content-certification .heading-certification {
+    color: var(--mandiri-colour-03, #013066);
+    font-family: Myriad Pro;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+#certification .content-certification .ag-description-certification {
+    color: var(--mandiri-light-010, #28323C);
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+/* end operation - certification  */
+
+/* start operation - low emission  */
+
+#low-emission {
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+#low-emission img {
+    width: 50%;
+}
+
+#low-emission .content-low-emission {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#low-emission .content-low-emission .heading-low-emission {
+    color: var(--mandiri-colour-03, #013066);
+    font-family: Myriad Pro;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+#low-emission .content-low-emission .ag-description-low-emission {
+    color: var(--mandiri-light-010, #28323C);
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+/* end operation - low emission  */
+
+/* start operation - led  */
+
+#led {
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+#led img {
+    width: 50%;
+}
+
+#led .content-led {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#led .content-led .heading-led {
+    color: var(--mandiri-colour-03, #013066);
+    font-family: Myriad Pro;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+#led .content-led .ag-description-led {
+    color: var(--mandiri-light-010, #28323C);
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+/* end operation - led  */
+
+/* start operation - water-efficiency  */
+
+#water-efficiency {
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+#water-efficiency img {
+    width: 50%;
+}
+
+#water-efficiency .content-water-efficiency {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#water-efficiency .content-water-efficiency .heading-water-efficiency {
+    color: var(--mandiri-colour-03, #013066);
+    font-family: Myriad Pro;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+#water-efficiency .content-water-efficiency .ag-description-water-efficiency {
+    color: var(--mandiri-light-010, #28323C);
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+/* end operation - water-efficiency  */
+
+/* start operation - carbon-tracking  */
+
+#carbon-tracking {
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+#carbon-tracking img {
+    width: 50%;
+}
+
+#carbon-tracking .content-wrapper-carbon-tracking {
+    display: flex;
+    gap: 2.5rem;
+}
+
+#carbon-tracking .content-carbon-tracking {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#carbon-tracking .content-carbon-tracking .heading-carbon-tracking {
+    color: var(--mandiri-colour-03, #013066);
+    font-family: Myriad Pro;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+#carbon-tracking .content-carbon-tracking .ag-description-carbon-tracking {
+    color: var(--mandiri-light-010, #28323C);
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+#carbon-tracking #co2-emission {
+    width: 100%;
+}
+
+#carbon-tracking .card-notes {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid var(--gradients-blue-04, #005BB4);
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0px 15px 40px 0px rgba(66, 66, 66, 0.03);
+    backdrop-filter: blur(10px);
+}
+
+#carbon-tracking .card-notes .heading-notes {
+    color: var(--light-grey-600, #6D6D6D);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+
+#carbon-tracking .card-notes .list-notes {
+    color: var(--light-grey-600, #6D6D6D);
+    font-family: Myriad Pro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+/* end operation - carbon-tracking  */
+
+/* end operation */
+
+
+
+/* start tcfd */
+
+.environment .header .heading {
+    color: var(--mandiri-colour-03, #013066);
+    font-family: font-semibold;
+    font-size: 32px;
+    font-style: normal;
+    text-align: center;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    margin-top: 6.063rem;
+}
+
+.environment .header .ag-description {
+    color: #020B15;
+    text-align: center;
+    font-family: font-regular;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 28px;
+    text-transform: capitalize;
+}
+
+.environment .tcfd .aspect {
     display: flex;
     gap: 1.375rem;
     margin-top: 3.25rem;
+    justify-content: center;
 }
 
-.aspect .box-title {
+.environment .tcfd .aspect .ag-box-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 24%;
+    width: 16.25rem;
     border-radius: 8px;
     background: #F9F9F9;
     padding: 1.75rem 3rem;
 }
 
-.aspect img {
+.environment .tcfd .aspect img {
     width: 2.673rem;
     height: 2.673rem;
 }
 
-.aspect .label {
+.environment .tcfd .aspect .label {
     color: #056608;
     font-family: font-semibold;
     font-size: 20px;
@@ -528,8 +1861,9 @@ main .esg-performance {
     text-transform: capitalize;
 }
 
-.description {
+.environment .tcfd .ag-description {
     display: flex;
+    flex-direction: column;
     gap: 1.375rem;
     margin-top: 3.25rem;
     font-family: font-regular;
@@ -538,10 +1872,10 @@ main .esg-performance {
     text-transform: capitalize;
 }
 
-.description .box {
+.environment .tcfd .ag-description .ag-box {
     color: #fff;
     display: flex;
-    width: 24%;
+    width: 16.25rem;
     height: auto;
     padding: 24px 16px;
     justify-content: center;
@@ -550,38 +1884,1462 @@ main .esg-performance {
     background: #006F41;
 }
 
-.description .items {
+.environment .tcfd .ag-description .items {
     display: block;
     margin-bottom: 1rem;
 }
 
+/* end tcfd */
+
 /* End Environment */
 
+/* Start Social */
+
+#social {
+    margin: auto;
+}
+
+#social #social-filter {
+    display: flex;
+    gap: 1rem;
+}
+
+#social .social-filter .ag-filter-label {
+    background: #F0F0F0;
+    padding: 0.75rem 1.25rem;
+}
+
+#social .social-content {
+    display: none;
+}
+
+#access-finance-radio:checked~.content-wrapper-social #access-finance {
+    display: block;
+}
+
+#access-finance-radio:checked~.ag-filter-wrapper #access-finance-label {
+    background: #DFEFFF;
+    box-shadow: 4px 6px 20px 0px rgba(1, 48, 102, 0.32);
+}
+
+#social-portfolio-radio:checked~.content-wrapper-social #social-portfolio {
+    display: block;
+}
+
+#social-portfolio-radio:checked~.ag-filter-wrapper #social-portfolio-label {
+    background: #DFEFFF;
+    box-shadow: 4px 6px 20px 0px rgba(1, 48, 102, 0.32);
+}
+
+#data-security-radio:checked~.content-wrapper-social #data-security {
+    display: block;
+}
+
+#data-security-radio:checked~.ag-filter-wrapper #data-security-label {
+    background: #DFEFFF;
+    box-shadow: 4px 6px 20px 0px rgba(1, 48, 102, 0.32);
+}
+
+#hc-development-radio:checked~.content-wrapper-social #hc-development {
+    display: block;
+}
+
+#hc-development-radio:checked~.ag-filter-wrapper #hc-development-label {
+    background: #DFEFFF;
+    box-shadow: 4px 6px 20px 0px rgba(1, 48, 102, 0.32);
+}
+
+#social .access-content-wrapper {
+    display: flex;
+    margin-top: 5.25rem;
+    gap: 2.5rem;
+}
+
+#social .card-commitment {
+    flex: 1;
+    background: #F9F9F9;
+    padding: 1rem;
+}
+
+#social .card-target-market {
+    flex: 1;
+    background: #F9F9F9;
+    padding: 1rem;
+}
+
+#social .access-content-wrapper .access-heading {
+    color: var(--text-color-03, #006F41);
+    font-family: Myriad Pro;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+#social .access-content-wrapper .access-ag-description {
+    color: var(--mandiri-light-010, #28323C);
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: capitalize;
+}
+
+#social .access-content-wrapper .access-ag-description ol {
+    color: var(--mandiri-light-009, #3C4B5A);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+#social .access-content-wrapper .access-ag-description .number-access-ag-description {
+    padding: 3px 8px 3px 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 68.571px;
+    background: #006F41;
+    color: #fff;
+    margin-right: 6px;
+}
+
+.ag-card-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5.25rem;
+    background-color: #F8F8F8;
+    position: relative;
+}
+
+
+.ag-social-title {
+    color: var(--mandiri-colour-03, #013066);
+    font-family: Myriad Pro;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 6.5rem;
+    margin-bottom: 1rem;
+}
+
+.ag-social-ag-description {
+    color: var(--text-color-01, #020B15);
+    text-align: center;
+    font-family: Myriad Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: -0.05px;
+    text-transform: capitalize;
+}
+
+.ag-social-card-title {
+    color: var(--mandiri-colour-03, #013066);
+    font-family: Myriad Pro;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+}
+
+.ag-social-card-ag-description {
+    color: #3C4B5A;
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+}
+
+#social #social-access-finance-filter {
+    display: flex;
+}
+
+#social #access-finance .social-access-finance-content {
+    display: none;
+}
+
+#social #community-empowerment-radio:checked~.content-wrapper-social-access-finance #community-empowerment {
+    display: block;
+}
+
+#social #ag-financial-inclusion-radio:checked~.content-wrapper-social-access-finance #ag-financial-inclusion {
+    display: block;
+}
+
+#social #ag-csr-radio:checked~.content-wrapper-social-access-finance #ag-csr {
+    display: block;
+}
+
+
+/* start communit empowerment */
+
+#community-empowerment-filter {
+    display: flex;
+}
+
+#community-empowerment .community-empowerment-content {
+    display: none;
+}
+
+#community-empowerment #wirausaha-muda-radio:checked~.community-empowerment-content-wrapper #wirausaha-muda {
+    display: block;
+}
+
+#community-empowerment #mandiri-sahabatku-radio:checked~.community-empowerment-content-wrapper #mandiri-sahabatku {
+    display: block;
+}
+
+#community-empowerment #rumah-bumn-radio:checked~.community-empowerment-content-wrapper #rumah-bumn {
+    display: block;
+}
+
+#community-empowerment #rice-milling-radio:checked~.community-empowerment-content-wrapper #rice-milling {
+    display: block;
+}
+
+#wirausaha-muda .ag-content1 {
+    display: flex;
+    gap: 2.75rem;
+}
+
+#community-empowerment .img-community-empowerment {
+    width: 100%;
+    height: 18.125rem;
+}
+
+#wirausaha-muda .ag-description {
+    color: var(--mandiri-light-009, #3C4B5A);
+    text-align: justify;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+#wirausaha-muda .heading {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+#wirausaha-muda .content2 {
+    display: flex;
+    gap: 3.25rem;
+
+}
+
+#alumni-sukses {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+#content-alumni-sukses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+#ag-description-quote {
+    display: flex;
+    gap: 1rem;
+}
+
+#ag-description-quote img {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* start mandiri sahabatku */
+
+#mandiri-sahabatku .ag-content1 {
+    display: flex;
+    gap: 2.75rem;
+}
+
+#mandiri-sahabatku #img-mandiri-sahabatku {
+    width: 27.75rem;
+    height: 18.125rem;
+}
+
+#mandiri-sahabatku .ag-description {
+    color: var(--mandiri-light-009, #3C4B5A);
+    text-align: justify;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+#mandiri-sahabatku .heading {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+#mandiri-sahabatku .mandiri-sahabatku button {
+    margin-top: 12px;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--mandiri-colours-05, #0024AE);
+    background: #FFF;
+}
+
+/* end mandiri sahabatku */
+
+/* start rumah bumn */
+
+#rumah-bumn .ag-content1 {
+    display: flex;
+    gap: 2.75rem;
+}
+
+#rumah-bumn #img-rumah-bumn {
+    width: 27.75rem;
+    height: 18.125rem;
+}
+
+#rumah-bumn .ag-description {
+    color: var(--mandiri-light-009, #3C4B5A);
+    text-align: justify;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+#rumah-bumn .heading {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+/* end rumah bumn */
+
+/* start rice milling */
+
+#rice-milling .ag-content1 {
+    display: flex;
+    gap: 2.75rem;
+}
+
+#rice-milling #img-rice-milling {
+    width: 27.75rem;
+    height: 18.125rem;
+}
+
+#rice-milling .ag-description {
+    color: var(--mandiri-light-009, #3C4B5A);
+    text-align: justify;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+#rice-milling .heading {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+/* end rice milling */
+
+/* end community empowerment */
+
+/* start financial inclusion */
+
+.ag-content-financial-inclusion {
+    display: none;
+}
+
+#ag-financial-inclusion #ag-kum-digital-radio:checked~.ag-content-wrapper-financial-inclusion #ag-kum-digital {
+    display: block;
+}
+
+#ag-financial-inclusion #ag-mandiri-agen-radio:checked~.ag-content-wrapper-financial-inclusion #ag-mandiri-agen {
+    display: block;
+}
+
+#ag-financial-inclusion #ag-kredit-usaha-rakyat-radio:checked~.ag-content-wrapper-financial-inclusion #ag-kredit-usaha-rakyat {
+    display: block;
+}
+
+#ag-financial-inclusion #ag-kredit-usaha-mikro-radio:checked~.ag-content-wrapper-financial-inclusion #ag-kredit-usaha-mikro {
+    display: block;
+}
+
+#ag-financial-inclusion #ag-livin-merchan-radio:checked~.ag-content-wrapper-financial-inclusion #ag-livin-merchan {
+    display: block;
+}
+
+#ag-financial-inclusion #ag-kopra-mandiri-radio:checked~.ag-content-wrapper-financial-inclusion #ag-kopra-mandiri {
+    display: block;
+}
+
+#ag-financial-inclusion #ag-tabungan-simpanan-pelajar-radio:checked~.ag-content-wrapper-financial-inclusion #ag-tabungan-simpanan-pelajar {
+    display: block;
+}
+
+.ag-content-financial {
+    display: flex;
+    gap: 2.75rem;
+}
+
+.ag-heading-financial {
+    color: var(--color-02, #013066);
+    font-family: Myriad Pro;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+}
+
+.ag-description-financial {
+    color: var(--mandiri-light-009, #3C4B5A);
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem;
+}
+
+.ag-img-financial {
+    width: 100%;
+    height: 18.125rem;
+}
+
+/* start kum digital */
+
+.ag-card-label-kum-digital {
+    color: #000;
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.625rem;
+}
+
+#ag-card-label-kum-digital {
+    color: #000;
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+#ag-card-amount-kum-digital {
+    color: #000;
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px
+}
+
+#ag-card-label-penyaluran {
+    font-size: 14px;
+}
+
+/* end kum digital */
+
+/* start mandiri agen */
+
+.ag-card-wrapper-mandiri-agen {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.ag-bg-img-mandiri-agen {
+    width: 17.438rem;
+    height: 6.875rem;
+    flex-shrink: 0;
+    border-radius: 0.493rem;
+    background-image: url("/assets/img/bg-ag-box-mandiri-agen.png"), lightgray 50% / cover no-repeat;
+}
+
+.ag-gradient-overlay-mandiri-agen {
+    width: 279px;
+    height: 110px;
+    border-radius: 0.493rem;
+    flex-shrink: 0;
+    background: linear-gradient(107deg, rgba(240, 243, 255, 0.90) 0%, rgba(0, 111, 65, 0.90) 100%);
+}
+
+.ag-box-mandiri-agen {
+    color: var(--mandiri-dark-010, #020B15);
+    font-family: Myriad Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    text-transform: capitalize;
+    display: flex;
+    width: 278px;
+    height: 110px;
+    border-radius: 0.493rem;
+    padding: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* end mandiri agen */
+
+/* start kredit usaha rakyat */
+
+.ag-bg-img-kredit-usaha-rakyat {
+    background: url('/assets/img/bg-img-kredit-usaha-rakyat.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    background-color: lightgray;
+    margin: 3rem 0;
+}
+
+.ag-gradient-overlay-kredit-usaha-rakyat {
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(248, 248, 248, 0.83));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ag-card-wrapper-kredit-usaha-rakyat {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 4rem;
+}
+
+#ag-label-data-kredit-usaha-rakyat {
+    text-align: center;
+
+}
+
+#ag-card-kredit-usaha-rakyat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ag-card-label-kredit-usaha-rakyat {
+    color: #000;
+    font-family: Myriad Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.ag-label-data-kredit-usaha-rakyat {
+    color: #006F41;
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.ag-line-data-kredit-usaha-rakyat {
+    width: 800px;
+    height: 2px;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #006F41 36.46%, #006F41 63.54%, rgba(255, 255, 255, 0.00) 100%);
+}
+
+.ag-card-amount-kredit-usaha-rakyat {
+    color: #000;
+    font-family: Myriad Pro;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+#ag-content2-livin-merchan {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* start kopra mandiri */
+
+.ag-card-wrapper-kopra-mandiri {
+    display: flex;
+    margin-top: 4rem;
+    gap: 3rem;
+}
+
+.ag-card-kopra-mandiri {
+    display: flex;
+    width: 22.313rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: 1px solid #c09e9e;
+    background: rgba(255, 255, 255, 0.80);
+    box-shadow: 0px 15px 40px 0px rgba(66, 66, 66, 0.03);
+    backdrop-filter: blur(10px);
+}
+
+.ag-thumbnail-kopra-mandiri {
+    display: flex;
+    height: 212px;
+    padding: 16px 89px 16px 88px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    background: #E5F4FF;
+    border-radius: 1rem 1rem 0 0;
+
+}
+
+.ag-text-kopra-mandiri {
+    color: #0B335C;
+    text-align: center;
+    font-family: Myriad Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    text-transform: capitalize;
+    padding: 1.5rem;
+}
+
+/* end kopra mandiri */
+
+/* end financial inclusion */
+
+/* start csr */
+
+#ag-csr .ag-content-csr {
+    display: none;
+}
+
+#ag-csr #ag-waste-to-energi-radio:checked~.ag-content-wrapper-csr #ag-waste-to-energi {
+    display: block;
+}
+
+#ag-csr #ag-mandiri-pilah-sampah-radio:checked~.ag-content-wrapper-csr #ag-mandiri-pilah-sampah {
+    display: block;
+}
+
+#ag-csr .ag-waste-to-energi ol {
+    color: var(--mandiri-light-009, #3C4B5A);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+#ag-csr .ag-waste-to-energi .number-access-ag-description {
+    padding: 3px 8px 3px 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 68.571px;
+    background: #006F41;
+    color: #fff;
+    margin-right: 6px;
+}
+
+/* end csr */
+
+/* start social portfolio */
+
+.ag-card1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5.25rem;
+    background-color: #F8F8F8;
+    position: relative;
+}
+
+.ag-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ag-pattern-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#social-portfolio h4 {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+}
+
+#social-portfolio p {
+    color: #3C4B5A;
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+}
+
+#left-content-social-portfolio {
+    padding: 0 3.25rem;
+}
+
+/* end social portfolio */
+
+/* Start Data Security */
+
+.data-security-content {
+    display: none;
+}
+
+#data-security #executive-oversight-radio:checked~.content-wrapper-data-security #executive-oversight {
+    display: block;
+}
+
+#data-security #data-privacy-radio:checked~.content-wrapper-data-security #data-privacy {
+    display: block;
+}
+
+#data-security #client-rights-radio:checked~.content-wrapper-data-security #client-rights {
+    display: block;
+}
+
+#data-security #audit-it-radio:checked~.content-wrapper-data-security #audit-it {
+    display: block;
+}
+
+#data-security #capability-development-radio:checked~.content-wrapper-data-security #capability-development {
+    display: block;
+}
+
+#data-security-filter {
+    display: flex;
+}
+
+
+/* start data privacy */
+
+#ag-content-data-privacy {
+    color: var(--text-color-01, #020B15);
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+    margin-top: 2rem;
+}
+
+.ag-box-content-data-privacy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.ag-box-ag-description-data-privacy {
+    color: var(--text-color-01, #020B15);
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    margin-top: 1rem;
+}
+
+/* end data privacy */
+
+/* start capability development */
+
+#capability-development .ag-content1 {
+    display: flex;
+    gap: 2.75rem;
+}
+
+#img-capability-development {
+    width: 100%;
+    height: 18.125rem;
+}
+
+#capability-development table {
+    border-radius: 12px 12px 0px 0px;
+    background-color: #fff;
+}
+
+#capability-development th,
+td {
+    padding: 1rem;
+    color: #38405B;
+}
+
+#capability-development th {
+    background: var(--mandiri-colour-03, #013066);
+    color: #fff;
+}
+
+#ag-heading-capability {
+    color: var(--mandiri-colour-03, #013066);
+    font-family: Myriad Pro;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+#ag-description-capability {
+    color: #3C4B5A;
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    margin-top: 1rem;
+}
+
+#capability-development .ag-sub-heading {
+    color: var(--mandiri-colour-03, #013066);
+    font-family: Myriad Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#ag-card-capability {
+    width: 660px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--gradient-primary, #0035F2);
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0px 15px 40px 0px rgba(66, 66, 66, 0.03);
+    backdrop-filter: blur(10px);
+}
+
+/* end capability development */
+
+/* End Data Security */
+
+/* start human capital development */
+
+#hc-development .card1 {
+    display: flex;
+    padding: 5rem 1px 6.75rem 4rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5.25rem;
+    background-color: #F8F8F8;
+    position: relative;
+}
+
+#ag-heading-ag-box-hc-development {
+    color: var(--mandiri-colour-03, #013066);
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+}
+
+#ag-description-ag-box-hc-development {
+    color: #3C4B5A;
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+}
+
+#left-content-hc-development {
+    padding: 0 3.25rem;
+}
+
+.ag-bg-hc-development {
+    margin-top: 6rem;
+    width: 100%;
+    height: 20.875rem;
+    background: rgba(0, 111, 65, 0.80);
+    padding: 3.25rem 0 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.ag-heading-hc-development {
+    color: var(--mandiri-light-001, #E4EAF0);
+    font-family: Myriad Pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.ag-card-wrapper-hc-development {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 11rem;
+    gap: 2rem;
+}
+
+.ag-card-hc-development {
+    border-radius: 15px;
+    background: hsl(0, 100%, 99%);
+    width: 230px;
+    height: 200px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-bottom: 8px solid green;
+}
+
+.ag-card-title-hc-development {
+    color: #047144;
+    font-family: Myriad Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+}
+
+.ag-card-ag-description-hc-development {
+    color: var(--mandiri-light-010, #28323C);
+    font-family: Myriad Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+}
+
+.hc-development-content {
+    display: none;
+}
+
+#human-capital-data-radio:checked~.content-wrapper-hc-development #human-capital-data {
+    display: block;
+}
+
+#training-development-radio:checked~.content-wrapper-hc-development #training-development {
+    display: block;
+}
+
+#engangement-radio:checked~.content-wrapper-hc-development #engangement {
+    display: block;
+}
+
+#welness-radio:checked~.content-wrapper-hc-development #welness {
+    display: block;
+}
+
+#mandiri-future-radio:checked~.content-wrapper-hc-development #mandiri-future {
+    display: block;
+}
+
+#mandiri-woman-radio:checked~.content-wrapper-hc-development #mandiri-woman {
+    display: block;
+}
+
+#grievance-mechanism-radio:checked~.content-wrapper-hc-development #grievance-mechanism {
+    display: block;
+}
+
+#hc-development-filter {
+    display: flex;
+    margin: 6rem 0;
+}
+
+.ag-dropdown-hc-development {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 4px 4px 0px 0px;
+    background: #006F41;
+    color: white;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.ag-dropdown-wrapper-hc-development {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.406rem;
+}
+
+/* start training development */
+
+.ag-card-wrapper-hc-development-training {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.938rem;
+    margin-top: 3.25rem;
+}
+
+.ag-card-hc-development-training {
+    display: flex;
+    width: 298px;
+    height: 283px;
+    padding: 16px 16px 16px 15.996px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #F8F8F8;
+}
+
+.ag-card-hc-development-training span {
+    display: flex;
+    padding: 0px 8px 0px 9px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 120px;
+    background: #006F41;
+}
+
+.ag-content-row1-training {
+    width: 100%;
+    color: #000;
+    font-family: Myriad Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: -0.8px;
+    text-transform: capitalize;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(232, 232, 232, 0.52);
+    ;
+}
+
+.ag-description-card-training {
+    color: var(--mandiri-light-009, #3C4B5A);
+    font-family: Myriad Pro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+}
+
+.ag-description-dropdown-hc-development {
+    color: #28323C;
+    font-family: Myriad Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.ag-description-heading-dropdown-hc-development {
+    color: #006F41;
+    font-family: Myriad Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+#hc-development .number-access-ag-description {
+    padding: 3px 8px 3px 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 68.571px;
+    background: #006F41;
+    color: #fff;
+    margin-right: 6px;
+}
+
+#hc-development .ag-list-item-hc-development {
+    margin: 1rem 0;
+}
+
+#bg-more-info {
+    background: url('/assets/img/bg-more-info.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    color: var(--mandiri-colours-04, #013066);
+    font-family: Myriad Pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1px;
+}
+
+#bg-more-info button {
+    width: 10.438rem;
+    height: 3rem;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 2px solid var(--mandiri-colours-05, #0024AE);
+    margin-top: 2rem;
+}
+
+/* end training development */
+
+/* start mandiri future */
+
+.ag-content-wrapper-row-mandiri-future {
+    display: flex;
+    gap: 3.5rem;
+    margin-top: 3.25rem;
+}
+
+.ag-card-mandiri-future {
+    width: 33.25rem;
+    height: 19.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ag-content-mandiri-future {
+    display: flex;
+    gap: 1rem;
+}
+
+.ag-content-mandiri-future img {
+    width: 9.5rem;
+    height: 5.25rem;
+    border-radius: 4px;
+}
+
+.ag-heading-mandiri-future {
+    color: var(--color-02, #013066);
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.ag-description-mandiri-future {
+    color: var(--mandiri-light-009, #3C4B5A);
+    text-align: justify;
+    font-family: Myriad Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.ag-box-content-mandiri-future {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--mandiri-colours-04, #013066);
+    font-family: Myriad Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    border-radius: 12px;
+    border: 1px dashed var(--color-02, #013066);
+    background: #FFF;
+    padding: 1.5rem;
+}
+
+.ag-box-content-mandiri-future span {
+    color: #162A43;
+    font-family: Myriad Pro;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-right: 1rem;
+}
+
+.ag-box-mesp {
+    width: 23rem;
+    height: 5.25rem;
+    border-radius: 4px;
+    background: var(--gradients-13, linear-gradient(180deg, #E3BF3D 21.07%, #EEAB1B 61.49%));
+    color: #FFF;
+    font-family: Myriad Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ag-heading-monash {
+    color: #162A43;
+    font-family: Myriad Pro;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+#img-women-development {
+    margin: 6.5rem 0;
+}
+
+
+
+
+/* end mandiri future */
+
+/* end human capital development */
+
+/* End Social */
+
+/* start governance */
+
+#governance .governance-content {
+    display: none;
+}
+
+#gcg-structure-radio:checked~.content-wrapper-governance #gcg-structure {
+    display: block;
+}
+
+#gcg-structure-radio:checked~.ag-filter-wrapper #gcg-structure-label {
+    background: #DFEFFF;
+    box-shadow: 4px 6px 20px 0px rgba(1, 48, 102, 0.32);
+}
+
+#board-independence-radio:checked~.content-wrapper-governance #board-independence {
+    display: block;
+}
+
+#board-independence-radio:checked~.ag-filter-wrapper #board-independence-label {
+    background: #DFEFFF;
+    box-shadow: 4px 6px 20px 0px rgba(1, 48, 102, 0.32);
+}
+
+#shareholders-radio:checked~.content-wrapper-governance #shareholders {
+    display: block;
+}
+
+#shareholders-radio:checked~.ag-filter-wrapper #shareholders-label {
+    background: #DFEFFF;
+    box-shadow: 4px 6px 20px 0px rgba(1, 48, 102, 0.32);
+}
+
+#esg-oversight-radio:checked~.content-wrapper-governance #esg-oversight {
+    display: block;
+}
+
+#esg-oversight-radio:checked~.ag-filter-wrapper #esg-oversight-label {
+    background: #DFEFFF;
+    box-shadow: 4px 6px 20px 0px rgba(1, 48, 102, 0.32);
+}
+
+/* end governance */
+
+/* start report */
+
+#report .report-content {
+    display: none;
+}
+
+#sustainability-report-radio:checked~.content-wrapper-report #sustainability-report {
+    display: block;
+}
+#sustainability-report-radio:checked~.ag-filter-wrapper #sustainability-report-label {
+    background: var(--grey-neutral-700, #C9C9CC);
+    color: var(--mandiri-colours-04, #013066);
+}
+
+#other-report-radio:checked~.content-wrapper-report #other-report {
+    display: block;
+}
+#other-report-radio:checked~.ag-filter-wrapper #other-report-label {
+    background: var(--grey-neutral-700, #C9C9CC);
+    color: var(--mandiri-colours-04, #013066);
+}
+
+
+.ag-button-download {
+    display: flex;
+    padding: 12px 24px;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 8px;
+    border: 2px solid var(--color-02, #013066);
+    background: var(--grey-neutral-100, #FDFDFD);
+}
+
+.ag-card-wrapper-report {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-top: 3.25rem;
+}
+
+#other-report table {
+    border-radius: 12px 12px 0px 0px;
+    background-color: #fff;
+}
+
+#other-report th,
+td {
+    padding: 1rem;
+    color: #38405B;
+}
+
+#other-report th {
+    background: var(--mandiri-colour-03, #013066);
+    color: #fff;
+}
+
+.card-contact {
+    width: 18.625rem;
+}
+
+/* end report */
+
+/* screen tablet */
+
 @media screen and (max-width: 1280px) {
-    .content .vision .box-wrapper {
-        font-size: 20px;
+    #overview {
+        padding: 0;
     }
 
-    .pillars .box-wrapper .box-item {
+    .content .vision .ag-box-wrapper {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .pillars .ag-box-wrapper .ag-box-item {
         width: 267px;
         padding: 10px 0;
         font-size: 15px;
     }
 
-    .commitment .box-wrapper .box-item {
+    .commitment .ag-box-wrapper .ag-box-item {
         padding: 10px 5px 13px 5px;
         gap: 5px;
         font-size: 14px;
         width: 267px;
     }
 
-    .initiatives .box-wrapper .content {
+    .initiatives .ag-box-wrapper .content {
         width: 267px;
     }
 
-    .content .enablers .box-wrapper {
+    .content .enablers .ag-box-wrapper {
         font-size: 20px;
-        width: 830px;
     }
 
     .content .enablers img {
@@ -607,25 +3365,11 @@ main .esg-performance {
     }
 }
 
+/* screen mobile */
+
 @media screen and (max-width: 425px) {
-    .nav-wrapper {
-        padding: 0;
-    }
-
-    .nav-wrapper .top {
-        justify-content: flex-end;
-    }
-
-    .nav-wrapper .down {
-        padding: 0 20px;
-    }
-
-    .nav-wrapper .right-content .label {
-        display: none;
-    }
-
-    .nav-wrapper .right-content .lock {
-        display: inline;
+    .ag-main-tab {
+        font-size: 1rem;
     }
 
     .right-content .menu-wrapper {
@@ -641,8 +3385,6 @@ main .esg-performance {
         display: block;
         background-image: url('/assets/img/banner-mobile.png');
         background-repeat: no-repeat;
-        /* background-position: center center; */
-        /* background-attachment: fixed; */
         background-size: cover;
         font-family: font-bold;
         text-align: center;
@@ -663,7 +3405,7 @@ main .esg-performance {
         margin-bottom: 0.75rem;
     }
 
-    .banner-mobile .box {
+    .banner-mobile .ag-box {
         display: flex;
         align-items: center;
         padding: 7px 8px;
@@ -674,28 +3416,28 @@ main .esg-performance {
         backdrop-filter: blur(1.2868621349334717px);
     }
 
-    .banner-mobile .box img {
+    .banner-mobile .ag-box img {
         width: 1.25rem;
     }
 
-    .banner-mobile .box .amount {
+    .banner-mobile .ag-box .amount {
         font-family: digital-dream-fat;
         font-size: 0.75rem;
     }
 
-    .banner-mobile .box .years {
+    .banner-mobile .ag-box .years {
         font-size: 0.313rem;
     }
 
-    .banner-mobile .box .label {
+    .banner-mobile .ag-box .label {
         font-size: 0.625rem;
     }
 
-    .banner-mobile .box .information {
+    .banner-mobile .ag-box .information {
         text-align: left;
     }
 
-    .banner-mobile .box .power {
+    .banner-mobile .ag-box .power {
         font-size: 0.313rem;
         font-family: digital-dream-fat;
     }
@@ -736,14 +3478,22 @@ main .esg-performance {
         overflow-y: scroll;
     }
 
+    #filter {
+        overflow-x: scroll;
+        padding: 0;
+    }
+
+
     /* end-header */
+
+    /* overview */
 
     .esg-framework {
         padding: 0 2rem;
     }
 
-    .esg-framework .heading {
-        font-size: 1.25rem;
+    .esg-framework .ag-heading {
+        font-size: 1rem;
         font-family: font-semibold;
     }
 
@@ -751,12 +3501,12 @@ main .esg-performance {
         overflow-y: scroll;
     }
 
-    .content .vision .box-wrapper {
+    .content .vision .ag-box-wrapper {
         font-size: 1rem;
         width: 300px;
     }
 
-    .pillars .box-wrapper .box-item {
+    .pillars .ag-box-wrapper .ag-box-item {
         width: 200px;
     }
 
@@ -888,12 +3638,246 @@ main .esg-performance {
         width: 60%;
     }
 
-    /* Footer */
+    /* End Overview */
 
-    .footer {
-        display: block;
-        padding: 16px;
+    /* Start Environment */
+
+    #environment {
+        padding: 0;
     }
 
-    .copyright {}
+    .menu-kategori {
+        overflow-y: scroll;
+    }
+
+    .menu-kategori .items {
+        width: auto;
+    }
+
+    /* start product */
+
+    .product {
+        padding: 0;
+    }
+
+    .product article .items-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.75rem;
+    }
+
+    .product article .price-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 10px;
+        justify-items: center;
+    }
+
+    #financing .card-wrapper .card {
+        flex-direction: column;
+
+    }
+
+    #financing .card-wrapper .card .heading-financing {
+        text-align: center;
+
+    }
+
+    #other-product .card-wrapper .card {
+        flex-direction: column;
+
+    }
+
+    /* end product */
+
+    /* start approach */
+
+    /* start approach - cpo */
+
+    #approach {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    #approach .card1 {
+        flex-direction: column-reverse;
+    }
+
+    #approach #content-center {
+        flex-direction: column;
+    }
+
+    #cpo {
+        flex-direction: column;
+    }
+
+    /* end approach - cpo */
+
+    #construction {
+        flex-direction: column;
+    }
+
+    #energy {
+        flex-direction: column;
+    }
+
+    #fmcg {
+        flex-direction: column;
+    }
+
+    #metal {
+        flex-direction: column;
+    }
+
+    /* end approach - construction */
+
+    /* end approach */
+
+    /* start operation */
+
+    #operation {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    #operation .content-wrapper-operation {
+        flex-direction: column;
+    }
+
+    #low-emission {
+        flex-direction: column;
+    }
+
+    #low-emission img {
+        width: 100%
+    }
+
+    #certification {
+        flex-direction: column;
+    }
+
+    #certification img {
+        width: 100%
+    }
+
+    #led {
+        flex-direction: column;
+    }
+
+    #led img {
+        width: 100%
+    }
+
+    #water-efficiency {
+        flex-direction: column;
+    }
+
+    #water-efficiency img {
+        width: 100%
+    }
+
+    #carbon-tracking {
+        flex-direction: column;
+    }
+
+    #carbon-tracking img {
+        width: 100%
+    }
+
+    #carbon-tracking .content-wrapper-carbon-tracking {
+        flex-direction: column;
+    }
+
+
+    /* end operation */
+
+
+    /* start tcfd */
+
+    .environment .tcfd {
+        padding: 0;
+    }
+
+    .environment .tcfd .aspect {
+        flex-direction: column;
+    }
+
+    .environment .tcfd .ag-description {
+        margin: auto;
+    }
+
+    .environment #environment-filter {
+        overflow: scroll;
+    }
+
+    .environment #environment-filter .ag-filter-label {
+        font-size: 1rem;
+    }
+
+    /* end tcfd */
+
+    /* End Environment */
+
+    /* start social */
+
+    .ag-heading-social {
+        color: var(--mandiri-colour-03, #013066);
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+        margin: 1rem 0;
+    }
+
+    #access-finance {
+        padding: 0;
+    }
+
+    #social .access-content-wrapper {
+        flex-direction: column;
+    }
+
+    #social-filter {
+        overflow-x: scroll;
+    }
+
+    #community-empowerment .community-empowerment-content-wrapper {
+        padding: 1rem;
+    }
+
+
+    #community-empowerment .community-empowerment-content {
+        flex-direction: column;
+    }
+
+    #community-empowerment .ag-content1,
+    #community-empowerment .content2 {
+        flex-direction: column;
+    }
+
+    #content-alumni-sukses {
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* end community empowerment */
+
+
+
+    /* start financial inclusion */
+
+
+
+    /* start kum digital */
+
+
+    /* start kum digital */
+
+    /* end financial inclusion */
+
+    /* end social */
 }
